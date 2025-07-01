@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ParkEasy - Smart Parking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .hero {
+      background-color: #4f46e5;
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .hero .btn-outline-light:hover {
+      background-color: white;
+      color: #4f46e5;
+    }
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .pointer-animate:hover {
+      animation: wiggle 0.4s ease-in-out;
+    }
+    @keyframes wiggle {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(3deg); }
+      50% { transform: rotate(-3deg); }
+      75% { transform: rotate(3deg); }
+      100% { transform: rotate(0deg); }
+    }
+    .btn-learn-more {
+      font-size: 1.4rem;
+      padding: 14px 28px;
+      border: 2px solid white;
+      font-weight: bold;
+      background-color: transparent;
+    }
+    .btn-learn-more:hover {
+      background-color: white;
+      color: #4f46e5;
+    }
+  </style>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
+    <a class="navbar-brand text-primary fw-bold" href="#">ParkEasy</a>
+    <div class="collapse navbar-collapse justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item px-3"><a class="nav-link" href="#">Dashboard</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="#">Find Parking</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="#">My Bookings</a></li>
+        <li class="nav-item px-3"><a class="nav-link" href="#">Profile</a></li>
+      </ul>
+    </div>
+    <div class="d-flex gap-2">
+      <div id="g_id_onload"
+        data-client_id="YOUR_GOOGLE_CLIENT_ID"
+        data-login_uri=""
+        data-auto_prompt="false">
+      </div>
+      <div class="g_id_signin" data-type="standard"></div>
+      <a href="https://github.com" class="btn btn-dark">GitHub</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="display-5 fw-bold">Smart Parking Made Simple</h1>
+    <p class="lead">Find, reserve, and pay for parking spots instantly. Join thousands of drivers who've made parking hassle-free.</p>
+    <div class="mt-4">
+      <a href="https://accounts.google.com/signin" target="_blank" class="btn btn-light text-primary fw-bold px-4 pointer-animate">Find Parking Now</a>
+      <a href="learn-more.html" target="_blank" class="btn btn-outline-light btn-learn-more pointer-animate">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm p-4">
+          <div class="card-icon text-primary"><i class="fas fa-search-location"></i></div>
+          <h5 class="card-title fw-bold">Find Parking</h5>
+          <p class="card-text">Search for available parking spots near your destination.</p>
+          <a href="https://accounts.google.com/signin" target="_blank" class="btn btn-primary mt-auto pointer-animate">Search Now</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm p-4">
+          <div class="card-icon text-success"><i class="fas fa-calendar-check"></i></div>
+          <h5 class="card-title fw-bold">My Reservations</h5>
+          <p class="card-text">View and manage your current parking reservations.</p>
+          <a href="#" class="btn btn-success mt-auto pointer-animate">View Bookings</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow-sm p-4">
+          <div class="card-icon text-purple"><i class="fas fa-history"></i></div>
+          <h5 class="card-title fw-bold">Parking History</h5>
+          <p class="card-text">Review your past parking sessions and payments.</p>
+          <a href="#" class="btn btn-secondary mt-auto pointer-animate" onclick="showHistory()">View History</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    function showHistory() {
+      alert("No previous history found for your account.");
+    }
+  </script>
+</body>
+</html>
